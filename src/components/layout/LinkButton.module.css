@@ -1,9 +1,11 @@
 .btn {
+  margin-top: 1rem;
   background-color: #222;
   color: #fff;
   padding: 0.5em 1em;
   text-decoration: none;
   transition: 0.5s;
+  border-radius: 0.8rem;
 }
 
 .btn:hover{
