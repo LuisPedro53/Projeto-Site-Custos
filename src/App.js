@@ -11,19 +11,19 @@ import Projects from "./components/pages/Projects";
 function App() {
   return (
     <Router>
-      <NavBar/>
-      
+      <NavBar />
+
       <Routes>
-        <Route path="/" element={<Container customClass = "min-height"><Home /></Container>} />
+        <Route path="/" element={<Container customClass="min-height"><Home /></Container>} />
         <Route path="/projects" element={<Container><Projects /></Container>} />
         <Route path="/company" element={<Container><Company /></Container>} />
         <Route path="/contact" element={<Container><Contact /></Container>} />
         <Route path="/newproject" element={<Container><NewProject /></Container>} />
 
       </Routes>
-      <Footer />  
+      {/* <Footer />   */}
     </Router>
-    
+
   );
 }
 
