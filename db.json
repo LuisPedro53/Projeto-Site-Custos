@@ -1,6 +1,40 @@
 {
-  "projects":[],
-  "categories":[
+  "projects": [
+    {
+      "name": "T",
+      "budget": "1",
+      "category": {
+        "id": "2",
+        "name": "Desenvolvimento"
+      },
+      "cost": 0,
+      "services": [],
+      "id": 1
+    },
+    {
+      "name": "Luiz Pedro Galdino Silva",
+      "budget": "5",
+      "category": {
+        "id": "1",
+        "name": "Infra"
+      },
+      "cost": 0,
+      "services": [],
+      "id": 2
+    },
+    {
+      "name": "Luiz Pedro Galdino Silva",
+      "budget": "5",
+      "category": {
+        "id": "1",
+        "name": "Infra"
+      },
+      "cost": 0,
+      "services": [],
+      "id": 3
+    }
+  ],
+  "categories": [
     {
       "id": 1,
       "name": "Infra"
