@@ -21,7 +21,6 @@ function Project(){
   }
 
   useEffect (()=>{
-
     setTimeout(() => {
       fetch('http://localhost:5000/projects',{
       method: 'GET' ,
@@ -31,12 +30,12 @@ function Project(){
       })
       .then(resp => resp.json())
       .then((data)=> {
-        console.log(data);
+        // console.log(data);
         setProjects(data);
         setRemoveLoading(true);
       })
       .catch((err)=>console.error(err));
-    }, 2000);
+    }, 1300);
   },[])
 
   function removeProjects(id){
