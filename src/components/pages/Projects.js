@@ -54,29 +54,33 @@ function Project() {
 
   return (
     <div className={styles.project_container}>
-      <div className={styles.title_container}>
-        <h1>Meus Projetos</h1>
-        <LinkButton to="/newproject" text="Novo Projeto" />
+      <div className={styles.parteCima}>
+        <div className={styles.title_container}>
+          <h1>Meus Projetos</h1>
+          <LinkButton to="/newproject" text="Novo Projeto" />
+        </div>
+        {message && <Message type="success" msg={message} />}
+        {projectMessage && <Message type="success" msg={projectMessage} />}
       </div>
-      {message && <Message type="success" msg={message} />}
-      {projectMessage && <Message type="success" msg={projectMessage} />}
-      <Container customClass="start">
-        {projects.length > 0 &&
-          projects.map((projects) => (
-            <ProjectCard
-              id={projects.id}
-              name={projects.name}
-              budget={parseFloat(projects.budget)}
-              category={projects.category.name}
-              key={projects.id}
-              handleRemove={removeProjects}
-            />
-          ))}
-        {!removeLoading && <Loading />}
-        {removeLoading && projects.length === 0 && (
-          <p>Não há projetos cadastrados!</p>
-        )}
-      </Container>
+      <div className={styles.cardsProjets}>
+        <Container customClass="start">
+          {projects.length > 0 &&
+            projects.map((projects) => (
+              <ProjectCard
+                id={projects.id}
+                name={projects.name}
+                budget={parseFloat(projects.budget)}
+                category={projects.category.name}
+                key={projects.id}
+                handleRemove={removeProjects}
+              />
+            ))}
+          {!removeLoading && <Loading />}
+          {removeLoading && projects.length === 0 && (
+            <p>Não há projetos cadastrados!</p>
+          )}
+        </Container>
+      </div>
     </div>
   );
 }

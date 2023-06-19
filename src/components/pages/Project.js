@@ -29,9 +29,8 @@ function Project() {
       })
         .then((resp) => resp.json())
         .then((data) => {
-          // const budget = parseFloat(data.budget);
-          // setProject({ ...data, budget });
-          setProject(data);
+          const budget = parseFloat(data.budget);
+          setProject({ ...data, budget });
           setServices(data.services);
         })
 
