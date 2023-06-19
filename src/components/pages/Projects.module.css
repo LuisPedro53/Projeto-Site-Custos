@@ -1,5 +1,8 @@
 .project_container {
   padding: 2em;
+  width: 100%;
+  border: 5px solid black;
+  
 }
 
 .title_container {

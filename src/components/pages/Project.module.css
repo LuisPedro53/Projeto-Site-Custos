@@ -1,5 +1,12 @@
+.chefe {
+  width: 100%;
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+}
+
 .project_details{
-  
+  justify-content: center;
+  width: 80%;
   padding: 3em;
   border: 2px solid black;
   border-radius: 2rem;
@@ -16,6 +23,7 @@
   background-color: #222;
   color: #ffbb33;
   padding: 0.4em;
+  
 }
 
 .project_details span{
@@ -35,6 +43,7 @@
 
 .btn {
   margin-top: 1rem;
+  margin-bottom: 1rem;
   background-color: #222;
   color: #fff;
   padding: 0.5em 1em;
@@ -50,4 +59,20 @@
 
 .project_info{
   width: 100%;
+}
+
+@media (max-width: 500px){
+  @media (max-width: 500px) {
+    .project_details {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .btn {
+      margin-top: 10px; /* Adapte conforme necessário */
+    }
+  }
+  
 }

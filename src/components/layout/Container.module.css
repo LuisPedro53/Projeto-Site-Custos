@@ -1,5 +1,5 @@
 .container{
-  width: 1200px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
@@ -19,3 +19,9 @@
   flex-direction: column;
   justify-content: flex-start;
 }
+
+.center{
+  flex-direction: column;
+  justify-content: center; 
+}
+

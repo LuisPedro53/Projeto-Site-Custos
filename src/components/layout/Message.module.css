@@ -4,11 +4,12 @@
   border: 1px solid #000;
   margin: 0 auto;
   text-align: center;
-  margin-left: 2em;
+  margin-bottom: 1rem;  
   border-radius: 5px;
 }
 
 .success{
+  justify-content: center;
   color: #155724;
   background-color: #D4EDDA;
   border-color: #C3E6CB;
