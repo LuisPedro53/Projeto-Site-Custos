@@ -10,7 +10,7 @@ function ProjectForm({handleSubmit,btnText, projectData}){
   const [project, setProject] = useState(projectData || {});
 
   useEffect(()=>{
-      fetch('https://json-server-vercel-main-ten.vercel.app/categories',{
+      fetch('http://100.26.204.192:3000/categories',{
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',

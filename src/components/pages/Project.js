@@ -21,7 +21,7 @@ function Project() {
 
   useEffect(() => {
     setTimeout(() => {
-      fetch(`https://json-server-vercel-main-ten.vercel.app/projects/${id}`, {
+      fetch(`http://100.26.204.192:3000/projects/${id}`, {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -56,7 +56,7 @@ function Project() {
     projectUpdated.services = servicesUpdated;
     projectUpdated.cost = parseFloat(projectUpdated.cost) - parseFloat(cost);
 
-    fetch(`https://json-server-vercel-main-ten.vercel.app/projects/${projectUpdated.id}`, {
+    fetch(`http://100.26.204.192:3000/projects/${projectUpdated.id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
@@ -92,7 +92,7 @@ function Project() {
 
     project.cost = newCost;
 
-    fetch(`https://json-server-vercel-main-ten.vercel.app/projects/${project.id}`, {
+    fetch(`http://100.26.204.192:3000/projects/${project.id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
@@ -115,7 +115,7 @@ function Project() {
       return false;
     }
 
-    fetch(`https://json-server-vercel-main-ten.vercel.app/projects/${project.id}`, {
+    fetch(`http://100.26.204.192:3000/projects/${project.id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",

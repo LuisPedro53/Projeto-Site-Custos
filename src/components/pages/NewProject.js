@@ -10,21 +10,28 @@ function NewProject() {
     project.cost = 0;
     project.services = [];
 
-    fetch("https://json-server-vercel-main-ten.vercel.app/projects", {
+    fetch("http://100.26.204.192:3000/projects", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(project),
     })
-      .then((resp) => resp.json())
+      .then((resp) => {
+        console.log('Response status:', resp.status);
+        return resp.text().then(text => {
+          console.log('Response text:', text);
+          return JSON.parse(text); // Você pode modificar isso se o texto não for um JSON válido
+        });
+      })
       .then((data) => {
         console.log(data);
         navigate("/projects", {
           state: { message: "Projeto Criado Com Sucesso!" },
         });
       })
-      .catch((err) => console.log(err));
+      .catch((err) => console.error('Error:', err));
+    
   }
 
   return (
