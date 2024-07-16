@@ -10,7 +10,7 @@ function NewProject() {
     project.cost = 0;
     project.services = [];
 
-    fetch("http://100.26.204.192:3000/projects", {
+    fetch("http://localhost:5000/projects", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -21,7 +21,7 @@ function NewProject() {
         console.log('Response status:', resp.status);
         return resp.text().then(text => {
           console.log('Response text:', text);
-          return JSON.parse(text); // Você pode modificar isso se o texto não for um JSON válido
+          return JSON.parse(text); 
         });
       })
       .then((data) => {
