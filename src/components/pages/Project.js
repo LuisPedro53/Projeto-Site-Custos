@@ -1,7 +1,7 @@
 import styles from "./Project.module.css";
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { parse, v4 as uuidv4 } from "uuid";
+import { v4 as uuidv4 } from "uuid";
 import Loading from "../layout/Load";
 import Container from "../layout/Container";
 import ProjectForm from "../projects/ProjectForm";
@@ -139,32 +139,32 @@ function Project() {
           <div className={styles.project_details}>
             {message && <Message type={type} msg={message} />}
             <div className={styles.details_container}>
-              <h1>Projeto:{project.name}</h1>
+              <h1>Projeto: {project.name}</h1>
               <button className={styles.btn} onClick={toggleProjectForm}>
                 {!showProjectForm ? "Editar" : "Fechar"}
               </button>
               {!showProjectForm ? (
                 <div className={styles.project_info}>
                   <p>
-                    <span>Categoria:</span>
+                    <span>Categoria: </span>
                     {project.category.name}
                   </p>
                   <p>
-                    <span>Total de Orçamento:</span>{" "}
+                    <span>Total de Orçamento: </span>{" "}
                     {project.budget.toLocaleString("pt-BR", {
                       style: "currency",
                       currency: "BRL",
                     })}
                   </p>
                   <p>
-                    <span>Total Utilizado:</span>
+                    <span>Total Utilizado: </span>
                     {project.cost.toLocaleString("pt-BR", {
                       style: "currency",
                       currency: "BRL",
                     })}
                   </p>
                   <p>
-                    <span>Total Disponivel:</span>
+                    <span>Total Disponivel: </span>
                     {(project.budget - project.cost).toLocaleString("pt-BR", {
                       style: "currency",
                       currency: "BRL",

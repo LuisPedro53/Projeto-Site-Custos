@@ -24,12 +24,12 @@ function NavBar() {
           <li className={styles.item}>
             <Link to="/projects">Projetos</Link>
           </li>
-          <li className={styles.item}>
+          {/* <li className={styles.item}>
             <Link to="/contact">Contatos</Link>
           </li>
           <li className={styles.item}>
             <Link to="/company">Empresa</Link>
-          </li>
+          </li> */}
         </ul>
 
         <div className={styles.items_menu_mobile}>
